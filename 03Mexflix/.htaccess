@@ -1,0 +1,16 @@
+Options +FollowSymlinks 
+RewriteEngine On 
+
+RewriteBase /curso-poo/03Mexflix    
+
+RewriteCond %{SCRIPT_FILENAME} !-d 
+RewriteCond %{SCRIPT_FILENAME} !-f
+
+RewriteRule ^(.*)$ index.php?r=$1 [L] 
+
+
+#todos los links que vayana tener URL amigables puedan funcionar deacuerdo a la manera en que se van a configurar
+#Se active toda la programacion que ira en el archivo .htaccess
+#Cual es la ruta de la aplicación
+#si existen archivos o directivos que se forman en la URL amigable, va acceder al archivo que se esta consultando
+#reemplaze el valor de la variable que viene por get
